@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js ES6 Fat Arrow Function</title>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        
+
+        <script>
+            //1. function define
+            function getFunctionA(...n1){ //old way 1995-2023
+                //function body
+                //statment
+                console.log('-->',n1[0]);
+                
+                //Every function may return somthink number , string, array, object, function
+                return 10+n1[0]; //I am return number
+            }
+    
+            //New way ES6 Fat arrow myFunctionB
+            let getFunctionB=(...n2)=>{
+                console.log(n2[0]);
+                var a = 20; //local variable
+                //Every return function somthing
+                return a+n2[0];
+                
+            }
+            let myFunctionC=n3=>{ //n3 is a formal argument
+                
+                console.log(n3);
+                //every function may return somthing
+                
+            }
+            const myFunctionD=(n4,n5)=>{
+
+                //Every function may return somthink
+                return n4+n5;
+
+            }
+
+
+
+            //2. function calline/Invokin
+            const x = getFunctionA(1);
+            console.log(x);
+
+            var y = getFunctionB(2);
+            console.log(y);
+            
+            console.log(x+y);
+
+            myFunctionC(50);
+            console.log(myFunctionD(60,50));
+
+        </script>
+    </body>
+</html>
